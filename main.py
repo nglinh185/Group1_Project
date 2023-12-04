@@ -34,7 +34,7 @@ def main():
     
     # Intro 
     st.title("Daily Horoscopes")
-    st.text("'Get your free daily, weekly, monthly, yearly horoscopes reading!'")
+    st.text("'Get your free daily, monthly, yearly horoscopes reading!'")
 
     # Menu
     with st.sidebar:
