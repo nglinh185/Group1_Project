@@ -6,7 +6,7 @@ from about_us import display_about_info
 from tarot import display_tarot_info
 import base64
 from streamlit_option_menu import option_menu
-import webbrowser
+import webbrowser as wb
 
 # Background
 @st.cache_data
@@ -89,7 +89,7 @@ def main():
         selected_option = st.radio("Select an option:", ["Contact Us", "Feedback Form"])
 
         if selected_option == "Contact Us":
-            st.button("Go to Facebook Page", on_click=lambda: webbrowser.open_new_tab("https://www.facebook.com/profile.php?id=61553564769648"))
+            st.button("Go to Facebook Page", on_click=lambda: wb.open("https://www.facebook.com/profile.php?id=61553564769648"))
         elif selected_option == "Feedback Form":
             show_feedback_form()
 
