@@ -64,10 +64,6 @@ def main():
     elif selected == "Astrology Zodiac Signs":
         display_zodiac_info()
     elif selected == "Contact Us":
-        # Function to open the Facebook page
-        def open_facebook_page():
-            webbrowser.open_new_tab("https://www.facebook.com/profile.php?id=61553564769648")
-
         # Function to show the feedback form
         def show_feedback_form():
             st.header(":mailbox: Leave your feedback for us!")
@@ -93,7 +89,7 @@ def main():
         selected_option = st.radio("Select an option:", ["Contact Us", "Feedback Form"])
 
         if selected_option == "Contact Us":
-            st.button("Go to Facebook Page", on_click=open_facebook_page)
+            st.button("Go to Facebook Page", on_click=lambda: webbrowser.open_new_tab("https://www.facebook.com/profile.php?id=61553564769648"))
         elif selected_option == "Feedback Form":
             show_feedback_form()
 
