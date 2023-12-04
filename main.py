@@ -6,7 +6,7 @@ from about_us import display_about_info
 from tarot import display_tarot_info
 import base64
 from streamlit_option_menu import option_menu
-import webbrowser as wb
+import webbrowser 
 
 # Background
 @st.cache_data
