@@ -14,7 +14,7 @@ def display_home():
     "Cancer": "style/cancer.png",
     "Leo": "style/leo.png",
     "Virgo": "style/virgo.png",
-    "Libra": "style/libra.pngu",
+    "Libra": "style/libra.png",
     "Scorpio": "style/scorpio.png",
     "Sagittarius": "style/sagittarius.png",
     "Capricorn": "style/capricorn.png",
