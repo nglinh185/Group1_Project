@@ -15,16 +15,6 @@ def get_horoscope_by_day(zodiac_sign: int, day: str):
     data = soup.find('div', attrs={'class': 'main-horoscope'})
     return data.p.text
 
-
-def get_horoscope_by_week(zodiac_sign: int):
-    res = requests.get(
-        f"https://www.horoscope.com/us/horoscopes/general/horoscope-general-weekly.aspx?sign={zodiac_sign}")
-    soup = BeautifulSoup(res.content, 'html.parser')
-    data = soup.find('div', attrs={'class': 'main-horoscope'})
-    st.write("Updating...")
-    return data.p.text
-
-
 def get_horoscope_by_month(zodiac_sign: int):
     res = requests.get(
         f"https://www.horoscope.com/us/horoscopes/general/horoscope-general-monthly.aspx?sign={zodiac_sign}")
@@ -51,7 +41,7 @@ def display_forecast():
                 except requests.RequestException as e:
                     st.error(f"Failed to retrieve horoscope: {e}")
         elif horoscope_period == "Yearly":
-            selectedd = st.selectbox("Choose your Zodiac", ["Aries", "Taurus", "Gemini", "Cancer", "Leo", "Virgo", "Libra", "Scorpio", "Sagittarius", "Capricorn", "Aquarius", "Pisces"])
+            selectedd = st.selectbox("Confirm your Zodiac", ["Aries", "Taurus", "Gemini", "Cancer", "Leo", "Virgo", "Libra", "Scorpio", "Sagittarius", "Capricorn", "Aquarius", "Pisces"])
             selected_year = st.selectbox("Choose year", list(range(2016, 2024)))
 
             url = f"https://www.horoscope.com/us/horoscopes/yearly/{selected_year}-horoscope-{selectedd.lower()}.aspx"
